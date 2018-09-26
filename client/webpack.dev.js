@@ -16,7 +16,7 @@ module.exports = merge(common, {
     historyApiFallback: true,
     hot: true,
     proxy: {
-      '/api': 'http://localhost:3001'
+      '/api': 'http://localhost:3000'
     }
   },
   plugins: [
