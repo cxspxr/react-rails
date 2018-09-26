@@ -2,13 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {AppContainer} from 'react-hot-loader'
 import App from './App'
-import store from 'store/store.dev'
 
 rootElement = document.getElementById('app')
 render = (Component) ->
   ReactDOM.render(
     <AppContainer>
-      <Component store={store}/>
+      <Component/>
     </AppContainer>,
     rootElement
   )
