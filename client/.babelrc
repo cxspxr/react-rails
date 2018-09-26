@@ -1,10 +1,10 @@
 {
-  "presets": [["es2015", { "modules": false }], ["react"]],
+  "presets": [["@babel/env", { "modules": false }], ["@babel/react"]],
   "plugins": ["react-hot-loader/babel"],
   "env": {
     "test": {
-      "plugins": "transform-es2015-modules-commonjs",
-      "presets": ["react", "jest"]
+      "plugins": ["transform-es2015-modules-commonjs"],
+      "presets": ["@babel/react", "jest"]
     }
   }
 }

@@ -5,7 +5,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const {DefinePlugin} = require('webpack')
-const {UglifyJsPlugin} = require('webpack').optimize
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(common, {
   entry: './src/index.prod.coffee',
@@ -16,10 +16,7 @@ module.exports = merge(common, {
       template: path.resolve('./src/index.html'),
       inject: 'body'
     }),
-    new UglifyJsPlugin({
-      sourceMap: true,
-      comments: false
-    }),
+    new UglifyJsPlugin,
     new DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')

@@ -1,4 +1,5 @@
 const path = require('path')
+const rupture = require('rupture')
 
 const isDev = process.argv.indexOf('-p') === -1
 let removeNull = array => array.filter(e => e !== null)
@@ -69,9 +70,15 @@ module.exports = {
               importLoaders: 1
             }
           },
-          isDev ? null : 'postcss-loader?parser=sugarss'
+          isDev ? null : 'postcss-loader?parser=sugarss',
+          {
+            loader: 'stylus-loader',
+            options: {
+              sourceMap: isDev
+            }
+          }
         ])
       }
     ]
-  }
+  },
 }
