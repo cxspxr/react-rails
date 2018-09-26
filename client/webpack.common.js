@@ -70,13 +70,15 @@ module.exports = {
               importLoaders: 1
             }
           },
-          isDev ? null : 'postcss-loader?parser=sugarss',
+          isDev ? null : 'postcss-loader',
           {
             loader: 'stylus-loader',
             options: {
-              sourceMap: isDev
+              sourceMap: isDev,
+              use: [rupture()]
             }
-          }
+          },
+          isDev ? 'postcss-loader?parser=sugarss' : null
         ])
       }
     ]
