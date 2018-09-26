@@ -55,7 +55,7 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(styl)$/,
+        test: /\.(sss)$/,
         include: path.resolve('./src'),
         use: removeNull([
           'style-loader',
@@ -69,14 +69,7 @@ module.exports = {
               importLoaders: 1
             }
           },
-          isDev ? null : 'postcss-loader',
-          {
-            loader: 'stylus-loader',
-            options: {
-              includePaths: [path.resolve('./src/styles')],
-              sourceMap: isDev
-            }
-          }
+          isDev ? null : 'postcss-loader?parser=sugarss'
         ])
       }
     ]
