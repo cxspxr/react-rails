@@ -14,7 +14,12 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: path.resolve('./public/index.html'),
-      inject: 'body'
+      inject: 'body',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        conservativeCollapse: true
+      }
     }),
     new UglifyJsPlugin,
     new DefinePlugin({
