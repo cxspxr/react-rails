@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server  --config webpack.dev.js --mode=development",
-    "prod": "webpack --config webpack.prod.js -p --mode=production",
+    "prod": "webpack --config webpack.prod.js -p",
     "test-once": "jest ./src/**/*",
     "test": "npm run test-once -- --watch"
   },

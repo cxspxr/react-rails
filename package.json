@@ -6,7 +6,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "build": "npm --prefix client install && npm --prefix client run build",
+    "build": "npm --prefix client install && npm --prefix client run prod",
     "deploy": "cp -a client/dist/. public/",
     "heroku-postbuild": "npm run build && npm run deploy"
   }
