@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import logo from 'assets/logo.svg'
 
+import 'styles/index.css'
 import styles from 'styles/App.sss'
 
 export default class App extends Component
