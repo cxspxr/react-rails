@@ -1,24 +1,33 @@
-# README
+# Rails API + React Template
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Includes:
 
-Things you may want to cover:
+* Rails 5.2.1 API
 
-* Ruby version
+* MySQL2
 
-* System dependencies
+* CoffeeScript2
 
-* Configuration
+* Stylus + PostCSS (SugarSS) + Rupture
 
-* Database creation
+* Husky
 
-* Database initialization
+* Jest
 
-* How to run the test suite
+* Webpack for dev & prod
 
-* Services (job queues, cache servers, search engines, etc.)
+* And more
 
-* Deployment instructions
 
-* ...
+## Development
+
+```bash
+rake start
+```
+
+
+## Deployment
+
+```bash
+npm run build
+```
