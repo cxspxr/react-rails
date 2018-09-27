@@ -70,7 +70,7 @@ module.exports = {
               importLoaders: 1
             }
           },
-          isDev ? null : 'postcss-loader',
+          'postcss-loader',
           {
             loader: 'stylus-loader',
             options: {
